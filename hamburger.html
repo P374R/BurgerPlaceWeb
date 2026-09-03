@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preload" as="image" href="burgerBG.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Italiana&family=Prata&family=Inter:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger</title>
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: sans-serif;
+            background-image: url(burgerBG.webp);
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-top: 40px;
+        }
+
+        #burger {
+            height: auto;
+            width: 550px;
+            display: flex;
+            background: transparent;
+            backdrop-filter: blur(8px);
+            flex-direction: column;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            padding-left: 250px;
+            padding-right: 250px;
+            padding-top: 35px;
+            padding-bottom: 500px;
+        }
+
+        #Back {
+            background-color: rgb(35, 35, 35);
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #Back:hover {
+            background-color: rgb(200, 200, 200);
+            color: rgb(35, 35, 35);
+            transform: scale(1.075);
+        }
+
+        .submit-btn {
+            background-color: #ff1d1d;
+            color: white;
+            border-radius: 5px;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            font-family: 'Abril Fatface', serif;
+            border-radius: 50px;
+        }
+
+        .submit-btn:hover {
+            background-color: #ff4a4a;
+            transform: scale(1.02);
+            border-radius: 50px;
+        }
+
+        fieldset {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        legend {
+            color: #ff4e48;
+            font-weight: 600;
+            padding: 0 8px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        label[for="patties"] {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: #2a2a2a;
+            color: white;
+            font-size: 15px;
+            outline: none;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        select:focus {
+            border-color: #ff4e48;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            cursor: pointer;
+            font-size: 25px !important;
+            color: #ddd;
+            transition: color 0.2s ease;
+        }
+
+        .checkbox-label:hover {
+            color: white;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            accent-color: #ff4e48;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+    </script>
+
+    <div class="wrapper">
+        <div id="burger">
+            <br>
+            <h1 style="font-family: sans-serif; font-size: 50px;">Customize Your Hamburger</h1>
+            <br>
+            <br>
+            <form action="mailto:example@example.com" method="POST" enctype="text/plain" style="width: 100%;">
+
+                <input type="hidden" name="Burger Type" value="Hamburger">
+
+                <fieldset>
+                    <legend>Number of Patties</legend>
+                    <label for="patties">Select Patties:</label>
+                    <select id="patties" name="Patty Count">
+                        <option value="1 Patty">1 Patty</option>
+                        <option value="2 Patties">2 Patties</option>
+                        <option value="3 Patties">3 Patties (Monster)</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Toppings & Sauces</legend>
+                    <br>
+                    <label class="checkbox-label"><input type="checkbox" name="Extra" value="Onions"> Onions</label>
+                    <br>
+                    <label class="checkbox-label"><input type="checkbox" name="Extra" value="Hot Sauce"> Hot
+                        Sauce</label>
+                    <br>
+                    <label class="checkbox-label"><input type="checkbox" name="Extra" value="Chili Peppers"> Chili
+                        Peppers</label>
+                    <br>
+                    <label class="checkbox-label"><input type="checkbox" name="Extra" value="House Sauce"> House
+                        Sauce</label>
+                    <br>
+                    <label class="checkbox-label"><input type="checkbox" name="Extra" value="Extra Cheese"> Extra
+                        Cheese</label>
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Fries / Side</legend>
+                    <label for="fries">Select Fries:</label>
+                    <select id="fries" name="Fries">
+                        <option value="None">None</option>
+                        <option value="Regular Fries">Regular Fries</option>
+                        <option value="Large Fries">Large Fries</option>
+                        <option value="Curly Fries">Curly Fries</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Drink</legend>
+                    <label for="drink">Select Drink:</label>
+                    <select id="drink" name="Drink">
+                        <option value="None">None</option>
+                        <option value="Coca-Cola">Coca-Cola</option>
+                        <option value="Fanta">Fanta</option>
+                        <option value="Sprite">Sprite</option>
+                        <option value="Water">Water</option>
+                        <option value="Iced Tea">Iced Tea</option>
+                    </select>
+                </fieldset>
+                <br>
+                <br>
+
+                <button type="submit" class="submit-btn">Place Order via Email</button>
+            </form>
+            <br>
+
+            <a href="index.html"><button id="Back">Back to Home</button></a>
+
+        </div>
+    </div>
+</body>
+
+</html>

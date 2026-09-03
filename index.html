@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preload" as="image" href="burgerBG.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Italiana&family=Prata&family=Inter:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Place Web</title>
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-image: url(burgerBG.webp);
+            margin: 0;
+            padding: 0;
+        }
+
+        .burgerNames {
+            font-family: 'Abril Fatface', serif;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-top: 40px;
+        }
+
+        .Burger {
+            transition: transform 0.2s ease;
+            height: 250px;
+            width: 250px;
+            background: transparent;
+            backdrop-filter: blur(8px);
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            box-shadow: 0 40px 80px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 15px;
+            padding-bottom: 75px;
+        }
+
+        .Burger:hover {
+            transform: scale(1.075);
+            transition: transform 0.2s ease;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+        }
+
+        #welcomeings {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #get {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            backdrop-filter: blur(12px);
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #get:hover {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            transform: scale(1.075);
+        }
+
+        .burgerMotivation {
+            font-family: 'Abril Fatface', serif;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id=welcomeings>Burger Place Web</h1>
+    <script>
+    </script>
+    <div class="wrapper">
+        <div class="Burger">
+            <h1 class="burgerNames">Hamburger</h1>
+            <br>
+            <p class="burgerMotivation">100% all natural ingredeints, freshly made for the maximum enjoyment! So what
+                are
+                you waiting for?
+                Order and grab your burger!
+            </p>
+            <a href="hamburger.html">
+                <button id="get">Chose your burger</button>
+            </a>
+        </div>
+        <div class="Burger">
+            <h1 class="burgerNames">Cheeseburger</h1>
+            <br>
+            <p class="burgerMotivation">100% all natural ingredeints, freshly made for the maximum enjoyment! So what
+                are
+                you waiting for?
+                Order and grab your cheeseburger!
+            </p>
+            <a href="cheeseburger.html">
+                <button id="get">Chose your burger</button>
+            </a>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
